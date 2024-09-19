@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: futi-dev/futi-detroit-standalone
+          repository: futi-dev/futi-detroit-kaito-standalone
           token: ${{ secrets.GH_PAT }}
           fetch-depth: 0
           lfs: true
@@ -76,7 +76,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: futi-dev/futi-detroit-standalone
+          repository: futi-dev/futi-detroit-kaito-standalone
           token: ${{ secrets.GH_PAT }}
           fetch-depth: 0
           lfs: true
@@ -111,7 +111,7 @@ jobs:
             host: ${{ secrets.SERVER_IP }}
             username: root
             key: ${{ secrets.SERVER_SSH }}
-            script: cd ~ && sh deploy-futi-detroit.sh
+            script: cd ~ && sh deploy-futi-detroit-kaito.sh
 
       - name: Store artifact commit version
         shell: bash
